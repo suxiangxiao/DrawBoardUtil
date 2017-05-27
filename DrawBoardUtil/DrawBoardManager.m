@@ -41,7 +41,7 @@
     
     __unsafe_unretained typeof(self) weakSelf = self;
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.left.right.equalTo(weakSelft);
+        make.top.bottom.left.right.equalTo(weakSelf);
     }];
     
     self.drawBoardUtil = [[DrawBoardUtil alloc] initWithBackgroundImage:bgImage];
@@ -50,7 +50,7 @@
     [self addSubview:self.drawBoardUtil];
     
     [self.drawBoardUtil mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.left.right.equalTo(weakSelft);
+        make.top.bottom.left.right.equalTo(weakSelf);
     }];
     
     NSArray *titles = @[@"画图", @"撤销", @"重画" , @"橡皮檫", @"保存"];
