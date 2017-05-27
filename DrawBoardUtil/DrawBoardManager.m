@@ -39,7 +39,7 @@
     imageView.userInteractionEnabled = YES;
     [self addSubview:imageView];
     
-    __weak typeof(self) weakSelft = self;
+    __unsafe_unretained typeof(self) weakSelf = self;
     [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.bottom.left.right.equalTo(weakSelft);
     }];
